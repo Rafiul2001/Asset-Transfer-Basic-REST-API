@@ -1,0 +1,30 @@
+{
+  "name": "backend-for-rkgroup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "build": "npx tsc",
+    "prestart": "npm run build",
+    "start": "node dist/server.js",
+    "preserve": "npm run build",
+    "serve": "npx tsc -w & nodemon dist/server.js"
+  },
+  "author": "RK Group",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.10",
+    "nodemon": "^3.1.4",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.11.1",
+    "@hyperledger/fabric-gateway": "^1.5.1",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}
